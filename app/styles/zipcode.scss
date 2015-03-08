@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Antic+Slab);
+
+html,body {
+  height:100%;
+}
+
+h1 {
+  /*font-family: 'Antic Slab', serif;*/
+  /*font-size:80px;*/
+  color:#DDCCEE;
+}
+
+.lead {
+	color:#DDCCEE;
+}
+
+
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:30%;
+  color:#eee;
+  overflow:hidden;
+
+  /* Location of the image */
+  background-image: url(https://unsplash.imgix.net/photo-1422513391413-ddd4f2ce3340?dpr=2&fit=crop&fm=jpg&q=75&);
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #110022;
+}
+
+.container-full a {
+  color:#efefef;
+  text-decoration:none;
+}
+
+.v-center {
+  margin-top:7%;
+}
+  
