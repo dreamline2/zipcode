@@ -98,7 +98,7 @@ gulp.task('styles', function () {
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('.tmp/styles'))
     // Concatenate And Minify Styles
-    .pipe($.if('*.css', $.csso()))
+    // .pipe($.if('*.css', $.csso()))
     .pipe(gulp.dest('dist/styles'))
     .pipe($.size({title: 'styles'}));
 });
@@ -110,7 +110,7 @@ gulp.task('html', function () {
   return gulp.src('app/**/*.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
-    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+    // .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
     // Remove Any Unused CSS
     // Note: If not using the Style Guide, you can delete it from
     // the next line to only include styles your project uses.
@@ -127,13 +127,13 @@ gulp.task('html', function () {
     })))
     // Concatenate And Minify Styles
     // In case you are still using useref build blocks
-    .pipe($.if('*.css', $.csso()))
+    // .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())
     // Update Production Style Guide Paths
     .pipe($.replace('components/components.css', 'components/main.min.css'))
     // Minify Any HTML
-    .pipe($.if('*.html', $.minifyHtml()))
+    // .pipe($.if('*.html', $.minifyHtml()))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
